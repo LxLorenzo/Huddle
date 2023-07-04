@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: hsl(257, 40%, 49%);
+  --button: hsl(300, 69%, 71%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg-color);
+}
+
+
+header {
+  width: 100vw;
+}
+
+header img {
+  padding: 2rem;
+  width: 40%;
+}
+
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.hero-container__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container__img img {
+  width: 80%;
+}
+
+.hero-container__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  gap: 1rem;
+  width: 90%;
+}
+
+.hero-container__content-title {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-container__content-text {
+  font-size: 1.063rem;
+  line-height: 1.550;
+}
+
+.hero-container__content-button {
+  border: 1px solid var(--bg-color);
+  outline: 0;
+  background-color: #fff;
+  color: var(--bg-color);
+  padding: .75rem 5rem;
+  border-radius: 50px;
+  box-shadow: 1px 1px 6px #00000060;
+  transition: .4s;
+  
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: .825rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-container__content-button:hover {
+  color: #fff;
+}
+
+.hero-container__content-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--button);
+  z-index: -1;
+  transition: transform 0.5s;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+
+.hero-container__content-button:hover::before {
+  transform: scaleX(1);
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-icons i {
+  border: 1px solid #fff;
+  padding: .5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: color .1s;
+}
+
+.social-icons i:hover {
+  color: var(--button);
+  border: 1px solid var(--button);
+}
+
+.attribution {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+a {
+  color: var(--button);
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background: url("./images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--bg-color);
+    width: 100vw;
+    height: 100vh;
+  }
+
+  header {
+    padding: 0 3rem;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 5rem;
+    gap: 3rem;
+  }
+
+  .hero-container__img {
+    width: 80%;
+  }
+
+  .hero-container__img img {
+    width: 100%;
+  }
+
+  .hero-container__content {
+    align-items: flex-start;
+    text-align: left;
+    width: 60%;
+    padding: 2rem 0;
+  }
+
+  .hero-container__content-text {
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0 6rem;
+    margin-top: 2rem;
+  }
+}
