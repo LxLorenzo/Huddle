@@ -22,6 +22,7 @@ body {
   font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--bg-color);
+  overflow-x: hidden;
 }
 
 
@@ -31,7 +32,7 @@ header {
 
 header img {
   padding: 2rem;
-  width: 40%;
+  width: 250px;
 }
 
 
@@ -167,7 +168,7 @@ a {
   }
 
   header img {
-    width: 30%;
+    width: 500px;
   }
 
   .hero-container {
@@ -183,7 +184,7 @@ a {
   }
 
   .hero-container__img img {
-    width: 100%;
+    width: 800px;
   }
 
   .hero-container__content {
